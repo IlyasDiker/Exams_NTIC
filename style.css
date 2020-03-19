@@ -90,6 +90,17 @@ footer{
 	margin: 10px auto;
 	bottom: 10px;
 }
+.code_btn{
+	background: #303f9f;
+	color: white;
+	font-size: 18px;
+	padding: 10px 20px;
+	border-radius: 30px;
+	width: 150px;
+
+	margin: 10px auto;
+	bottom: 10px;
+}
 
 .pdf_phone{
 	display: none;
@@ -121,6 +132,12 @@ footer{
   	position: fixed;
   	right: calc(-50vw + 50%);
 	left: calc(-50vw + 50%);
+  }
+  .code_btn{
+  	position: fixed;
+  	left: calc(-50vw + 50%);
+  	right: calc(-50vw + 50%);
+  	bottom: 60px;
   }
 
   .pdf_phone{
