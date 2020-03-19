@@ -16,7 +16,7 @@
 			sexe = null;
 			if (sexeradio) {sexe = "Male";} else { sexe = "Female"}
 			nation = null;
-			if (nationbox) {nation = "Marocain"} else { nation = "Etranger"}
+			if (nationbox) {nation = "Marocain"} else { nation = document.getElementById("pays").value}
 			inters = "";
 			var intersname = ["lecture", "cinema", "sports", "theatre", "voyage", "sciences"];
 			for (let i=0; i<intersname.length; i++) {
@@ -142,7 +142,13 @@
 	<div class="rowradio">
 		<p>Nationnalite</p>
 		<div class="radio"><input type="radio" id="marocain" name="nation" checked>Marocain(e)</div>
-		<div class="radio"><input type="radio" id="etranger" name="nation" >Entranger(e)</div>
+		<div class="radio"><input type="radio" id="etranger" name="nation" >
+			<select id="pays">
+				<option value="autres">Autres</option>
+				<option value="france">France</option>
+				<option value="belgique">Belgique</option>
+				<option value="corona">Italie</option>
+			</select></div>
 	</div>
 	<div class="row1">
 		<p>Interets</p>
