@@ -7,7 +7,7 @@
 	<script>
 		function calculer(){
 			var aliment = [['pain', 2.75], ['viande', 1.80], ['legumes', 0.4], ['banane', 116], ['pomme', 80], ['yaourt', 140]];
-			var reuslt = 0;
+			var result = 0;
 			for (var i = 0; i > aliment.length - 1; i++) {
 				if (document.getElementsById(aliment[i][0]).checked){ /*get the checkbox*/
 					if(document.getElementsById(aliment[i][0]+"f").value = ""){ /*get the field*/
@@ -15,12 +15,12 @@
 					} else {
 						var ratio = aliment[i][1];
 						var qt = document.getElementsById(aliment[i][0]+"f").value;
-						reuslt = reuslt + (qt*ratio);
+						result = result + (qt*ratio);
 					}
 					
 				}
 			}
-			reuslt = "La valeur energetique de vote repas est : "+reuslt+" kilojoule"
+			result = "La valeur energetique de vote repas est : "+result+" kilojoule"
 			document.getElementById("resultat").innerHTML= result;
 		}
 	</script>
