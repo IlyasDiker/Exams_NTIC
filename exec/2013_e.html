@@ -8,8 +8,49 @@
 	<script>
 		function calculer() {
 			if (document.getElementById("nbpoint").value == "") {
-				document.getElementById("nbpoint").style.backgroundColor = "#ef9a9a";}
-					/* had l code mafiya li ikhedmo, so tkhayel m3aya ra hade l code kayen o khedam*/
+				document.getElementById("nbpoint").style.backgroundColor = "#ef9a9a";} else {
+					const n = document.getElementById("nbpoint").value;
+					var brut = n*4.83;
+					var prime = (brut*(13/100));
+					var Rr = (brut*(6/100));
+					var Rm = (brut*(2.5/100));
+					var Ri = 0;
+					var Rs = 0;
+				    if (brut>=0 && brut<28000){
+				        	Ri = 0;
+				        }
+				    if (brut>28000 && brut<=40000){
+				        	Ri = 12;
+				        }
+				    if (brut>40000 && brut<=50000){
+				        	Ri = 24;
+				        }
+				    if (brut>50000 && brut<=60000){
+				        	Ri = 34;
+				        }
+				    if (brut>60000 && brut<=150000){
+				        	Ri = 38;
+				        }
+				    if (brut > 150000){
+				        	Ri = 40;
+				        }
+					Rs = (brut*(Ri/100));
+
+				 	console.log(brut);
+				 	if(""+brut=="NaN"){
+				 		console.log("err");
+				 		document.getElementById("nbpoint").value="err";
+				 		document.getElementById("nbpoint").style="color: red";
+				 	}
+				 	console.log(Ri);
+					var net = brut+prime+(Rs+Rm+Rr);
+					document.getElementById("salairebrut").value = brut;
+					document.getElementById("primeres").value = prime;
+					document.getElementById("retuneret").value = Rr;
+					document.getElementById("retunemens").value = Rm;
+					document.getElementById("retuneimpo").value = Rs;
+					document.getElementById("salairenet").value = net;
+				}
 		}
 
 		function print() {
