@@ -8,16 +8,13 @@
 		function calculer(){
 			var aliment = [['pain', 2.75], ['viande', 1.80], ['legumes', 0.4], ['banane', 116], ['pomme', 80], ['yaourt', 140]];
 			var result = 0;
-			for (var i = 0; i > aliment.length - 1; i++) {
-				if (document.getElementsById(aliment[i][0]).checked){ /*get the checkbox*/
-					if(document.getElementsById(aliment[i][0]+"f").value = ""){ /*get the field*/
-						alert("emptyfield");
-					} else {
+			for (var i = 0; i<aliment.length - 1; i++) {
+				console.log(i);
+				if (document.getElementById(aliment[i][0]).checked){
+					console.log("filer 1");
 						var ratio = aliment[i][1];
-						var qt = document.getElementsById(aliment[i][0]+"f").value;
+						var qt = document.getElementById(aliment[i][0]+"f").value;
 						result = result + (qt*ratio);
-					}
-					
 				}
 			}
 			result = "La valeur energetique de vote repas est : "+result+" kilojoule"
@@ -81,9 +78,9 @@
 		    border-color: #007bff;
 		}
 		button:hover{
-			    color: #fff;
-    background-color: #007bff;
-    border-color: #007bff;
+			color: #fff;
+		    background-color: #007bff;
+		    border-color: #007bff;
 		}
 		@media only screen and (max-width: 600px) {
 			.row{
@@ -100,6 +97,18 @@
 			.btnrow{
 				display: grid;
 				grid-template-columns: auto;
+			}
+			.grame{
+				display: none;
+			}
+
+			.row4{
+				display: inline-grid;
+				grid-template-columns: 20px 200px auto;
+			}
+			.container{
+				width: auto;
+				padding: 20px;
 			}
 
 		}
