@@ -105,6 +105,15 @@ footer{
 .pdf_phone{
 	display: none;
 }
+.content{
+	margin: auto;
+	width: 600px;
+	padding: 20px;
+}
+.figs{
+ 	width: 600px;
+ 	padding: 20px 10px;
+}
 
 @media only screen and (max-width: 600px) {
   .box{
@@ -144,6 +153,16 @@ footer{
   	display: inline;
   	padding: 20px;
   	margin: 20px;
+  }
+  .content{
+	margin: 20px;
+	width: auto;
+	padding: 20px;
+	margin-bottom: 70px; 
+  }
+  .figs{
+ 	width: 80vw;
+ 	padding: 20px 10px;
   }
 
 }

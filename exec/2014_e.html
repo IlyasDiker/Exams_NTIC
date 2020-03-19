@@ -14,6 +14,10 @@
 			sexeradio = document.getElementById("male").checked;
 			nationbox = document.getElementById("marocain").checked;
 			sexe = null;
+			if (nom == "" || prenom == "" || age == ""){
+				alert("champs vide !");
+				return;
+			}
 			if (sexeradio) {sexe = "Male";} else { sexe = "Female"}
 			nation = null;
 			if (nationbox) {nation = "Marocain"} else { nation = document.getElementById("pays").value}
@@ -24,7 +28,7 @@
 					inters = inters + intersname[i]+", ";
 				}
 			}
-			string = "Nom:"+nom+"|Prenom:"+prenom+"|Age:"+age+"|Sexe:"+sexe+"|Nation:"+nation+"|Interets:"+inters;
+			string = "Nom:"+nom+" |Prenom:"+prenom+" |Age:"+age+" |Sexe:"+sexe+" |Nation:"+nation+" |Interets:"+inters;
 			document.getElementById("result").innerHTML=string;
 			
 		}	</script>
@@ -73,15 +77,15 @@
 			padding: .375rem .75rem;
 			color: #007bff;
 			border-radius: 5px;
-			    border: 1px solid transparent;
+			border: 1px solid transparent;
 		    background-color: transparent;
 		    background-image: none;
 		    border-color: #007bff;
 		}
 		button:hover{
-			    color: #fff;
-    background-color: #007bff;
-    border-color: #007bff;
+			color: #fff;
+		    background-color: #007bff;
+		    border-color: #007bff;
 		}
 		@media only screen and (max-width: 600px) {
 			.row{
@@ -102,6 +106,10 @@
 			.container{
 				width: auto;
 				padding: 20px;
+			}
+			#result{
+				width: 80vw;
+				padding: 10px;
 			}
 
 		}
@@ -171,7 +179,7 @@
 	<div class="btnrow">
 		<button onclick="dothemagic()">Afficher</button>
 	</div>
-	<div class="btnrow" style="padding: 10px;">
+	<div class="btnrow">
 		<p id="result"></p>
 	</div>
 </div>

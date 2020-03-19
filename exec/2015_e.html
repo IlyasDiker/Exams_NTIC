@@ -9,9 +9,7 @@
 			var aliment = [['pain', 2.75], ['viande', 1.80], ['legumes', 0.4], ['banane', 116], ['pomme', 80], ['yaourt', 140]];
 			var result = 0;
 			for (var i = 0; i<aliment.length - 1; i++) {
-				console.log(i);
 				if (document.getElementById(aliment[i][0]).checked){
-					console.log("filer 1");
 						var ratio = aliment[i][1];
 						var qt = document.getElementById(aliment[i][0]+"f").value;
 						result = result + (qt*ratio);
@@ -104,7 +102,7 @@
 
 			.row4{
 				display: inline-grid;
-				grid-template-columns: 20px 200px auto;
+				grid-template-columns: 20px auto auto;
 			}
 			.container{
 				width: auto;
