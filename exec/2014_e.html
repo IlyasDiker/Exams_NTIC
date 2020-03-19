@@ -5,6 +5,81 @@
 	<link rel="stylesheet" type="text/css" href="../style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="javascript" href="code.js">
+	<script>
+		function dothemagic() {
+
+		}
+	</script>
+	<style>
+		.container{
+			margin: 20px auto;
+			display: grid;
+			grid-template-columns: auto;
+			width: 500px;
+		}
+
+		.container h2{
+			margin: 20px;
+		}
+		.row{
+			display: inline-grid;
+			grid-template-columns: auto 250px;
+			padding: 5px;
+		}
+		.row1{
+			display: inline-grid;
+			grid-template-columns: auto;
+			padding: 5px;
+		}
+		.rowradio{
+			display: inline-grid;
+			padding: 5px;
+			grid-template-columns: auto auto auto;
+		}
+		.row input{
+			padding: .375rem .75rem;
+			border: 2px solid #ced4da;
+    		border-radius: .25rem;
+		}
+		.btnrow{
+			display: inline-grid;
+			grid-template-columns: auto auto auto auto;
+		}
+		button{
+			margin: 5px;
+			padding: .375rem .75rem;
+			color: #007bff;
+			border-radius: 5px;
+			    border: 1px solid transparent;
+		    background-color: transparent;
+		    background-image: none;
+		    border-color: #007bff;
+		}
+		button:hover{
+			    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+		}
+		@media only screen and (max-width: 600px) {
+			.row{
+				display: inline-grid;
+				grid-template-columns: auto;
+			}
+			.row input{
+				margin: 5px; 
+			}
+			.rowradio{
+				display: inline-grid;
+				grid-template-columns: auto auto auto;
+			}
+			.btnrow{
+				display: grid;
+				grid-template-columns: auto;
+			}
+
+		}
+
+	</style>
 </head>
 <body>
 
@@ -20,6 +95,52 @@
 	<a href="../enon/2015_n.html"><div class="box">2015</div></a>
 </header>
 <!-- HEADER 2 -->
+
+<!-- Solution -->
+<div class="container">
+	<h2>Inscription</h2>
+	<div class="row">
+		<p>Nom</p>
+		<input type="text" id="nom" name="nom">
+	</div>
+	<div class="row">
+		<p>Prenom</p>
+		<input type="text" id="prenom" name="prenom">
+	</div>
+	<div class="row">
+		<p>Age</p>
+		<input type="text" id="age" name="age">
+	</div>
+	<div class="rowradio">
+		<p>Sexe</p>
+		<div class="radio"><input type="radio" id="male" name="gender">Male</div>
+		<div class="radio"><input type="radio" id="female" name="gender">Female</div>
+	</div>
+	<div class="rowradio">
+		<p>Nationnalite</p>
+		<div class="radio"><input type="radio" id="marocain" name="gender">Marocain(e)</div>
+		<div class="radio"><input type="radio" id="etranger" name="gender">Entranger(e)</div>
+	</div>
+	<div class="row1">
+		<p>Interets</p>
+		<div class="rowradio">
+			<div class="radio"><input type="checkbox" id="lecture" name="interet">Lecture</div>
+			<div class="radio"><input type="checkbox" id="cinema" name="interet">Cinema</div>
+			<div class="radio"><input type="checkbox" id="sports" name="interet">Sports</div>
+		</div>
+		<div class="rowradio">
+			<div class="radio"><input type="checkbox" id="theatre" name="interet">Theatre</div>
+			<div class="radio"><input type="checkbox" id="voyage" name="interet">Voyage</div>
+			<div class="radio"><input type="checkbox" id="science" name="interet">Sciences</div>
+		</div>
+		
+	</div>
+	<div class="btnrow">
+		<button onclick="dothemagic()">Afficher</button>
+	</div>
+</div>
+
+<!-- Solution -->
 
 </body>
 </html>
