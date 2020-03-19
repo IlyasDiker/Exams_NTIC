@@ -19,7 +19,7 @@
 			if (nationbox) {nation = "Marocain"} else { nation = document.getElementById("pays").value}
 			inters = "";
 			var intersname = ["lecture", "cinema", "sports", "theatre", "voyage", "sciences"];
-			for (let i=0; i<intersname.length; i++) {
+			for (let i=0; i<intersname.length -1; i++) {
 				if (check = document.getElementById(intersname[i]).checked){
 					inters = inters + intersname[i]+", ";
 				}
