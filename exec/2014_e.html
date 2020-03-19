@@ -6,10 +6,28 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="javascript" href="code.js">
 	<script>
-		function dothemagic() {
-
-		}
-	</script>
+		function dothemagic(){
+			str="";
+			nom = document.getElementById("nom").value;
+			prenom = document.getElementById("prenom").value;
+			age = document.getElementById("age").value;
+			sexeradio = document.getElementById("male").checked;
+			nationbox = document.getElementById("marocain").checked;
+			sexe = null;
+			if (sexeradio) {sexe = "Male";} else { sexe = "Female"}
+			nation = null;
+			if (nationbox) {nation = "Marocain"} else { nation = "Etranger"}
+			inters = "";
+			var intersname = ["lecture", "cinema", "sports", "theatre", "voyage", "sciences"];
+			for (let i=0; i<intersname.length; i++) {
+				if (check = document.getElementById(intersname[i]).checked){
+					inters = inters + intersname[i]+", ";
+				}
+			}
+			string = "Nom:"+nom+"|Prenom:"+prenom+"|Age:"+age+"|Sexe:"+sexe+"|Nation:"+nation+"|Interets:"+inters;
+			document.getElementById("result").innerHTML=string;
+			
+		}	</script>
 	<style>
 		.container{
 			margin: 20px auto;
@@ -34,6 +52,11 @@
 		.rowradio{
 			display: inline-grid;
 			padding: 5px;
+			grid-template-columns: auto 125px 125px;
+		}
+		.rowcheck{
+			display: inline-grid;
+			padding: 10px;
 			grid-template-columns: auto auto auto;
 		}
 		.row input{
@@ -43,7 +66,7 @@
 		}
 		.btnrow{
 			display: inline-grid;
-			grid-template-columns: auto auto auto auto;
+			grid-template-columns: auto;
 		}
 		button{
 			margin: 5px;
@@ -113,30 +136,33 @@
 	</div>
 	<div class="rowradio">
 		<p>Sexe</p>
-		<div class="radio"><input type="radio" id="male" name="gender">Male</div>
+		<div class="radio"><input type="radio" id="male" name="gender" checked>Male</div>
 		<div class="radio"><input type="radio" id="female" name="gender">Female</div>
 	</div>
 	<div class="rowradio">
 		<p>Nationnalite</p>
-		<div class="radio"><input type="radio" id="marocain" name="gender">Marocain(e)</div>
-		<div class="radio"><input type="radio" id="etranger" name="gender">Entranger(e)</div>
+		<div class="radio"><input type="radio" id="marocain" name="nation" checked>Marocain(e)</div>
+		<div class="radio"><input type="radio" id="etranger" name="nation" >Entranger(e)</div>
 	</div>
 	<div class="row1">
 		<p>Interets</p>
-		<div class="rowradio">
+		<div class="rowcheck">
 			<div class="radio"><input type="checkbox" id="lecture" name="interet">Lecture</div>
 			<div class="radio"><input type="checkbox" id="cinema" name="interet">Cinema</div>
 			<div class="radio"><input type="checkbox" id="sports" name="interet">Sports</div>
 		</div>
-		<div class="rowradio">
+		<div class="rowcheck">
 			<div class="radio"><input type="checkbox" id="theatre" name="interet">Theatre</div>
 			<div class="radio"><input type="checkbox" id="voyage" name="interet">Voyage</div>
-			<div class="radio"><input type="checkbox" id="science" name="interet">Sciences</div>
+			<div class="radio"><input type="checkbox" id="sciences" name="interet">Sciences</div>
 		</div>
 		
 	</div>
 	<div class="btnrow">
 		<button onclick="dothemagic()">Afficher</button>
+	</div>
+	<div class="btnrow" style="padding: 10px;">
+		<p id="result"></p>
 	</div>
 </div>
 
