@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+
+*{
+	padding: 0px;
+	margin: 0px;
+	font-family: 'Ubuntu', sans-serif;
+}
+
+.header_top{
+	background: linear-gradient(157deg, rgba(9,9,121,1) 0%, rgba(0,212,255,1) 100%);
+	padding: 20px;
+	color: white;
+}
+
+.header_top a:visited{
+	color:white;
+}
+
+.header_2{
+	display: flex;
+}
+
+a{
+	text-decoration: none;
+}
+a:visited{
+	color: #303f9f;
+}
+
+.bigbox{
+
+}
+
+.box{
+	margin: 20px 30px;
+	padding: 10px;
+	color: #303f9f;
+	border-radius: 30px;
+	-webkit-box-shadow: 0px 0px 35px -6px rgba(0,0,0,0.38);
+	-moz-box-shadow: 0px 0px 35px -6px rgba(0,0,0,0.38);
+	box-shadow: 0px 0px 35px -6px rgba(0,0,0,0.38);
+	border: solid 1px #303f9f;
+	width: 100px;
+	text-align: center;
+	transition: 0.2s;
+}
+
+.box:hover{
+	color: #303f9f;
+	background: #c5cae9;
+	-webkit-box-shadow: 0px 0px 68px -6px rgba(0,0,0,0.69);
+	-moz-box-shadow: 0px 0px 68px -6px rgba(0,0,0,0.69);
+	box-shadow: 0px 0px 68px -6px rgba(0,0,0,0.69);
+	scale: 1.5;
+}
+
+.active{
+	color: white;
+	background: #303f9f;
+}
+
+footer{
+	text-align: center;
+}
+
+.exec_btn{
+	background: #303f9f;
+	color: white;
+	font-size: 18px;
+	padding: 10px 20px;
+	border-radius: 30px;
+	width: 150px;
+
+	margin: 10px auto;
+	bottom: 10px;
+}
+
+.pdf_phone{
+	display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .box{
+    margin: 10px 20px;
+    width: auto;
+  }
+  .header_top{
+  	margin-bottom: 10px;
+  }
+  .header_2{
+  	display: grid;
+  }
+
+  .iframe{
+  	display: none;
+  }
+
+  .exec_btn{
+  	position: fixed;
+  	right: calc(-50vw + 50%);
+	left: calc(-50vw + 50%);
+  }
+
+  .pdf_phone{
+  	display: inline;
+  	padding: 20px;
+  	margin: 20px;
+  }
+
+}
